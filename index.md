@@ -1,6 +1,6 @@
-# Carter Mak
 ---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-This site is currently under construction.
-
-For now, check out my [LinkedIn](https://www.linkedin.com/in/cartermak/)!
+layout: home
+---
