@@ -4,15 +4,16 @@ title: About
 permalink: /about/
 ---
 
-<img src="{{ site.baseurl }}/assets/portrait.jpg" alt="Protrait" width=175px align="left" hspace=25px>
+<img src="{{ site.baseurl }}/assets/portrait.jpg" alt="Protrait" width=200px align="left" hspace=25px>
 
 Welcome to my personal ePortfolio! Here, I keep track of all the personal projects, big and small, that occupy my time and satisfy my curiosity.
 
 I am currently a full-time student pursusing my B.S. in Aerospace Engineering at the University of Colorado, Boulder. When I'm not in class or tinkering at home, I'm usually skiing, hiking, rock climbing, or catching some precious *zzz*'s.
 
-<br/>
-<br/>
-<br/>
+### Contact
+
+Email: [Carter.Mak@colorado.edu](mailto:Carter.Mak@colorado.edu) <br/>
+LinkedIn: [Carter Mak](https://www.linkedin.com/in/cartermak)
 
 ---
 

@@ -27,3 +27,5 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
+
+<img src="{{ site.baseurl }}/assets/projects/custom_website/jekyll_folder_structure.png" alt="Default folder contents" align="right" width=200px hspace=25px>
