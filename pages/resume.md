@@ -4,4 +4,4 @@ title: Resume
 permalink: /resume
 ---
 
-This is where I would include my resume. I'll get there...
+<object data="{{ site.baseurl }}/assets/201911_carter_mak_resume.pdf" width="100%" height="1100" type='application/pdf'/>
