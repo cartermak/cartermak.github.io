@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Making a Static Website (Affordably!)
+title: Making a Static Website
 categories: projects
 ---
 
@@ -32,7 +32,7 @@ With those goals in mind, I set a few key specifications to guide the process of
 
     I am a college student, after all. I don't want to pay big fees for my small site. I'm not afraid of tinkering or learning new things, so I steered away from the fancy site-building tools that were out of budget.
 
-These targets guided me to my final solution: a static website, built using [Jekyll](https://jekyllrb.com/) and hosted for free (!!!) using [GitHub Pages](https://pages.github.com/). This struck a balance for me between getting to tinker and learn and needing to build everything from scratch. I've written notes in Markdown for years, but this was my introduction to Ruby and (mostly) HTML. For someone without any coding experience, the process could be a bit daunting, but it's a challenge I was willing to take on.
+These targets guided me to my final solution: a static website, built using [Jekyll](https://jekyllrb.com/) and hosted for free (!!!) using [GitHub Pages](https://pages.github.com/). This struck a balance for me between getting to tinker and learn and needing to build everything from scratch. I've written notes in Markdown for years, but this was my introduction to Ruby and (mostly) HTML. For someone who gets uncomfortable around plaintext files, the process could be a bit daunting, but I'm confident I can figure it out.
 
 # Making the Website
 
@@ -44,17 +44,27 @@ I checked out a number of different themes by searching for `jekyll-theme` on th
 
 ## Creating the Initial Site
 
-With this done, the rest of the process was fairly easy. Creating the website begins with installing [Ruby](https://www.ruby-lang.org/en/). Next, I installed the Ruby gems `Jekyll` and `bundler`:
+With this done, the rest of the process was fairly easy. Creating the website begins with installing [Ruby](https://www.ruby-lang.org/en/). This can be done in any Debian environment via apt:
 
-    gem install jekyll bundler
+```bash
+$ sudo apt install ruby-full
+```
+
+Next, I installed the Ruby gems `Jekyll` and `bundler`:
+
+```bash
+$ gem install jekyll bundler
+```
 
 I created a GitHub repository using the necessary naming convention for gh-pages:
 
     <gh-username>.github.io
 
-Initializing the website is as simple as using one Jekyll command :
+Initializing the website is as simple as using one Jekyll command:
 
-    jekyll new <site-name>
+```bash
+$ jekyll new <site-name>
+```
 
 This creates a directory called `<site-name>` from which I could build the site, populated with all the necessary files to get started:
 
@@ -62,7 +72,9 @@ This creates a directory called `<site-name>` from which I could build the site,
 
 The website is functional in this state! To view it locally, I simply navigate to the new directory and run:
 
-    bundle exec jekyll serve
+```bash
+$ bundle exec jekyll serve
+```
 
 This starts a local web server on port 4000. I can navigate to it in my web browser using either the loopback IP address: `127.0.0.1:4000`, or the hostname: `localhost:4000`. 
 
@@ -70,7 +82,9 @@ When I want to see what my site looks like on other devices, I can simply add th
 
 ## Making it My Own
 
-All that's left to build the site is to tweak the template to my satisfaction and add content. Here are the small changes I made:
+All that's left to build the site is to tweak the template to my satisfaction and add content. Some of the changes involved modifying theme files, so I first downloaded the folders `_includes` and `_layouts` from the Minima [repository](https://github.com/jekyll/minima) and added them to my site's repo. (One could also download the `_sass` folder to make changes to the site' styling.)
+
+ Here are the small changes I made:
 
 ### Adding social media
 
@@ -90,7 +104,7 @@ The template handles automatically displaying only the networks for which I prov
 
 ### Removing the site description from the footer
 
-I didn't have much to say in my website description, so I removed it from the footer. In order to edit the default layout templates, I first downloaded the full `_includes` folder form the Minima [repository](https://github.com/jekyll/minima) and added the folder to my site's repo. Removing the description from the footer was as simple as removing these lines from `footer.html`:
+I didn't have much to say in my website description, so I removed it from the footer. Removing the description from the footer was as simple as removing these lines from `_includes/footer.html`:
 
 ```diff
 - <div class="footer-col one-half">
@@ -133,7 +147,6 @@ minima:
 
 I also removed the date entirely from posts, replacing the text with a horizontal rule. This required the following changes to `post.html`:
 
-
 <!-- Shoot. This is calling the actual variables. Figure out how to make it stop that. -->
 
 ```diff
@@ -151,12 +164,27 @@ I also removed the date entirely from posts, replacing the text with a horizonta
 </header>
 ```
 
+Lastly, I removed the dates from the default post URL format. This was as simple as one line in `_config.yml`:
 
-<!-- Outline -->
+```yaml
+permalink: /:categories/:title
+```
 
-- Removing dates from posts list on home page
-- Removing dates from each post's page (also add a horizontal rule, I think just with `<hr />`???)
-- Set default link format as categories/post-name
+### Adding Thumbnails
+
+The default Minima home page is...fine, but I'd like to have a nice preview image displayed for each project. I added the following lines to `home.html`:
+
+```html
+
+```
+
+This also requires a line in `_config.yml`:
+
+```yml
+thumbnail_path: assets/thumbnails
+```
+
+To add a thumbnail, simply add a `.png` file to `assets/thumbnails` with the same name as the post title. 
 
 ### Adding a resume
 

@@ -38,6 +38,12 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Set post link format
+permalink: /:categories/:title
+
+# Path to thumbnails
+thumbnail_path: assets/thumbnails/
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
