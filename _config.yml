@@ -30,6 +30,7 @@ minima:
   social_links:
     github: cartermak
     linkedin: cartermak
+  date_format: "%Y"
 
 
 # Build settings

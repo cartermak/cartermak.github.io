@@ -110,7 +110,7 @@ Alternatively, one may copy the `_layouts` folder from the Minima repository and
 
 ### Removing the RSS subscription button
 
-I haven't used RSS feeds for years, and I'm frankly not sure how to anymore, so I removed the button. This required removing a few lines from `home.html`:
+I haven't used RSS feeds for years, and I don't know anyone who does, so I removed the button. This required removing a few lines from `home.html`:
 
 ```diff
 - <p class="feed-subscribe">
@@ -122,7 +122,35 @@ I haven't used RSS feeds for years, and I'm frankly not sure how to anymore, so 
 
 ### Removing Post Dates
 
-Minima is a great theme built with blog posts in mind, so everything is referenced by date. I'm happy to sort by date, but I don't need dates displayed everywhere. 
+Minima is a great theme built with blog posts in mind, so everything is referenced by date. I'm not interested in having dates everywhere, so I made a few changes.
+
+I edited the site's date format to only show the year with one small addition in `_config.yml`:
+
+```diff
+minima:
++  date_format: "%Y"
+```
+
+I also removed the date entirely from posts, replacing the text with a horizontal rule. This required the following changes to `post.html`:
+
+
+<!-- Shoot. This is calling the actual variables. Figure out how to make it stop that. -->
+
+```diff
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+  <p class="post-meta">
+-   <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+-     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+-     {{ page.date | date: date_format }}
+-   </time>
+    {%- if page.author -%}
+      • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
+    {%- endif -%}</p>
++   <hr/>
+</header>
+```
+
 
 <!-- Outline -->
 

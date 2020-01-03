@@ -5,3 +5,4 @@ permalink: /resume
 ---
 
 <object data="{{ site.baseurl }}/assets/201911_carter_mak_resume.pdf" width="100%" height="1100" type='application/pdf'/>
+<!-- <object data="{{ site.baseurl }}/assets/201911_carter_mak_resume.pdf" width="400" height="1100" type='application/pdf'/> -->
