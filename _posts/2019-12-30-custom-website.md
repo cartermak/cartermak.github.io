@@ -174,8 +174,32 @@ permalink: /:categories/:title
 
 The default Minima home page is...fine, but I'd like to have a nice preview image displayed for each project. I added the following lines to `home.html`:
 
-```html
+<!-- Fix verbatim issue -->
 
+```html
+{%- for post in site.posts -%}
+    <li>
++   {% if post.thumbnail_file %}
++   {% assign thumbnail = site.thumbnail_path | append: post.thumbnail_file %}
++   <hr width=25%>
++   <div>
++       <a href="{{ post.url | relative_url }}">
++       <img src="{{ thumbnail }}"" width="25%" hspace=25px>
++       </a>
++   </div>
++   {% endif %}
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+        </a>
+    </h3>
+    {%- if site.show_excerpts -%}
+    {{ post.excerpt }}
+    {%- endif -%}
+    </li>
+    {%- endfor -%}
 ```
 
 This also requires a line in `_config.yml`:
