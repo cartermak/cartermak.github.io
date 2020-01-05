@@ -2,6 +2,7 @@
 layout: post
 title: Using SSH Authentication with GitHub
 categories: Procedures
+thumbnail_file: github-ssh-setup.png
 ---
 
 # Overview
