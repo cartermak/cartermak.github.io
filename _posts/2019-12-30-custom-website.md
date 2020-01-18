@@ -82,7 +82,7 @@ When I want to see what my site looks like on other devices, I can simply add th
 
 ## Making it My Own
 
-All that's left to build the site is to tweak the template to my satisfaction and add content. Some of the changes involved modifying theme files, so I first downloaded the folders `_includes` and `_layouts` from the Minima [repository](https://github.com/jekyll/minima) and added them to my site's repo. (One could also download the `_sass` folder to make changes to the site' styling.)
+All that's left to build the site is to tweak the template to my satisfaction and add content. Some of the changes involved modifying theme files, so I first downloaded the folders `_includes`, `_layouts`, `_sass`, and `assets` from the Minima [repository](https://github.com/jekyll/minima) and added them to my site's repo. (One could also download the `_sass` folder to make changes to the site' styling.)
 
  Here are the small changes I made:
 
