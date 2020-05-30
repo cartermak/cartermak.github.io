@@ -2,46 +2,100 @@
 layout: default
 ---
 
+<style>
+	.card {
+		/* Add shadows to create the "card" effect */
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		transition: 0.3s;
+		height: 160px;
+		background-color: white;
+	}
+
+	.card-image {
+		width: 25%;
+		height: 120px;
+		margin: 20px;
+		position: relative;
+		display: inline-block;
+	}
+
+	img {
+		max-height: 100%;
+		max-width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
+	.card-body {
+		height: 100%;
+		max-width: 65%;
+		float: right;
+		position: relative;
+		text-align: right;
+		display: table;
+	}
+
+	.card-body-center {
+		padding: 20px 40px 20px 20px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	/* On mouse-over, add a deeper shadow */
+	.card:hover {
+		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	/* Add some padding inside the card container */
+	.container {
+		padding: 2px 16px;
+	}
+</style>
+
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+	{%- if page.title -%}
+	<h1 class="page-heading">{{ page.title }}</h1>
+	{%- endif -%}
 
-  {{ content }}
+	{{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-      <hr>
-      {% if post.thumbnail_file %}
-        {% assign thumbnail = site.thumbnail_path | append: post.thumbnail_file %}
-        <div>
-          <a href="{{ post.url | relative_url }}">
-            <img src="{{ thumbnail }}"" width="25%" hspace=25px>
-          </a>
-        </div>
-        {% endif %}
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-        {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+	{%- if site.posts.size > 0 -%}
+	<h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+	<ul class="post-list">
+		{%- for post in site.posts -%}
+		<li>
+			<div class="card">
+				{% if post.thumbnail_file %}
+				{% assign thumbnail = site.thumbnail_path | append: post.thumbnail_file %}
+				<div class="card-image">
+					<a href="{{ post.url | relative_url }}">
+						<img src="{{ thumbnail }}" style="width:100%; vertical-align: middle;">
+					</a>
+				</div>
+				{% endif %}
+				{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+				<div class="card-body">
+					<div class="card-body-center">
+						<span class="post-meta">{{ post.date | date: date_format }}</span>
+						<h3>
+							<a class="post-link" href="{{ post.url | relative_url }}">
+								{{ post.title | escape }}
+							</a>
+						</h3>
+					</div>
+				</div>
+				{%- if site.show_excerpts -%}
+				{{ post.excerpt }}
+				{%- endif -%}
+			</div>
+		</li>
+		{%- endfor -%}
+	</ul>
 
-    <!-- <p class="feed-subscribe">
-      <a href="{{ 'feed.xml' | relative_url }}">
-        <svg class="svg-icon orange"><use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Subscribe</span>
-      </a>
-    </p> -->
-  {%- endif -%}
+	{%- endif -%}
 
 </div>

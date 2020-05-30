@@ -2,15 +2,16 @@
 layout: post
 title: Making a Static Website
 categories: projects
+thumbnail_file: custom-website.svg
 ---
 
 # Motivation
 
-This website serves two purposes:
+Here it is! My very own website. Why? It serves a couple of purposes:
 
 1. **Document Projects**
 
-    I spend a lot of time tinkering with side projects, but documenting these projects is hard. This website will give me a place to store, update, and share notes. 
+    I spend a lot of time tinkering with side projects, but documenting these projects is hard. This website will give me a place to store, update, and share notes, as well as simply exhibit the things I work on.
 
 1. **Satisfy Requirements**
 
@@ -32,11 +33,11 @@ With those goals in mind, I set a few key specifications to guide the process of
 
     I am a college student, after all. I don't want to pay big fees for my small site. I'm not afraid of tinkering or learning new things, so I steered away from the fancy site-building tools that were out of budget.
 
-These targets guided me to my final solution: a static website, built using [Jekyll](https://jekyllrb.com/) and hosted for free (!!!) using [GitHub Pages](https://pages.github.com/). This struck a balance for me between getting to tinker and learn and needing to build everything from scratch. I've written notes in Markdown for years, but this was my introduction to Ruby and (mostly) HTML. For someone who gets uncomfortable around plaintext files, the process could be a bit daunting, but I'm confident I can figure it out.
+These targets guided me to my final solution: a static website, built using [Jekyll](https://jekyllrb.com/) and hosted for free using [GitHub Pages](https://pages.github.com/). This struck a balance for me between getting to tinker and learn and needing to build everything from scratch. I've written notes in Markdown for years, but this was my introduction to Ruby and (mostly) HTML. For someone who gets uncomfortable around plaintext files, the process could be a bit daunting, but I'm confident I can figure it out.
 
 # Making the Website
 
-*Note: These notes cover the work that I did. This does not constitute a full guide. Visit the Jekyll documentation and read up on Ruby, YML, HTML, and Markdown syntax to get the full picture.*
+> *Note: These notes cover the work that I did. This does not constitute a full guide. Visit the Jekyll documentation and read up on Ruby, YML, HTML, and Markdown syntax to get the full picture.*
 
 Perhaps the most overwhelming thing about Jekyll is the sheer number of templates available. I considered building the site content before choosing a template, but because there are slight differences in the naming conventions used by different templates, so I decided against this. 
 

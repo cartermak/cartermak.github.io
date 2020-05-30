@@ -7,7 +7,9 @@ thumbnail_file: github-ssh-setup.png
 
 # Overview
 
-These instructions will focus on setting up local git authentication for GitHub on Debian Linux. Specifically, I use Pop!_OS (based on Ubuntu) as my Linux desktop environment, and Ubuntu on WSL in Windows. The procedures are just about identical for both. This procedure focuses on setting up a local user with SSH authentication using a 4096-bit RSA key pair. 
+Git is a fantastic tool, but here's the issue---I'm lazy. Cloning and pushing to a git repository using standard HTTPS generally requires you to authenticate in the command line, but that's a lot of work. Instead, I use SSH authentication unless I'm working in an environment where someone could physically access my computer or otherwise get my private key. It's secure, and more importantly, it's fast and easy.
+
+These instructions will focus on setting up local git authentication for GitHub on Debian Linux. Specifically, I use Pop!_OS (based on Ubuntu) as my Linux desktop environment, and Ubuntu on WSL in Windows. The procedures are just about identical for both. Here, we'll set up a local user with SSH authentication using a 4096-bit RSA key pair. 
 
 [Here](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) is a tutorial from GitHub covering these steps.
 
@@ -33,7 +35,7 @@ $ git config --global user.name "<Your Name>"
 $ git config --global user.email "<you@domain.com>"
 ```
 
-Now, the authentication. I'm lazy and don't like to need to authenticate every time I access a remote git server. I use SSH authentication unless I'm working on something important/secure. To begin, check whether you already have an SH key pair:
+Now, the authentication. To begin, check whether you already have an SSH key pair:
 
 ```bash
 $ cd ~/.ssh
@@ -69,3 +71,5 @@ The last step to using SSH for GitHub is to use the correct remote URL. When set
 ```
 git@github.com:user/repo.git
 ```
+
+There you go! You're all set to leave entering credentials behind and start using Git with SSH.
