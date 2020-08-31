@@ -242,7 +242,7 @@ This is a small detail, but it can make a website look more professional. First,
 ```html
 <link rel="shortcut icon" href="{{ site.baseurl }}/<path-to-icon>/favicon.ico" />
 ```
-In the future, I might drop into [GIMP](https://www.gimp.org/) and create something a little more sophisticated, but this get's the job done for now.
+In the future, I might drop into [GIMP](https://www.gimp.org/) and create something a little more sophisticated, but this gets the job done for now.
 
 # Getting it all online
 
