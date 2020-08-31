@@ -4,11 +4,9 @@ title: About
 permalink: /about/
 ---
 
-<img src="{{ site.baseurl }}/assets/portrait.jpg" alt="Protrait" width=200px align="left" hspace=25px>
+Welcome to my personal ePortfolio! Here, I share some of the personal projects and adventures that occupy my time and satisfy my curiosity. (*Will I actually post here regularly? That remains to be seen.*) I'm an eclectic learner building on a lifelong passion for the technology that facilitates the world we live in. From building water bottle rockets as a child to air cannons as a teenager and award-winning rocket payloads to finish out high school, I've always enjoyed the rewarding feeling of making something new.
 
-Welcome to my personal ePortfolio! Here, I share some of the personal projects, big and small, that occupy my time and satisfy my curiosity. I'm an eclectic learner building on a lifelong passion for the technology that facilitates the world we live in. From building water bottle rockets as a child to air cannons as a teenager and award-winning rocket payloads to finish out high school, I've always enjoyed the rewarding feeling of making something new.
-
-Currently, I'm a full-time student pursusing my B.S. in Aerospace Engineering at the University of Colorado, Boulder. When I'm not in class or tinkering at home, I'm usually skiing, hiking, rock climbing, or catching some precious *zzz*'s.
+Currently, I'm a full-time student pursuing my B.S. in Aerospace Engineering at the University of Colorado, Boulder. When I'm not in class or tinkering at home, I'm usually skiing, hiking, rock climbing, camping, or catching some precious *zzz*'s.
 
 ### Contact
 
