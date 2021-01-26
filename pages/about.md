@@ -10,6 +10,8 @@ Welcome to my personal ePortfolio! Here, I share some of the personal projects a
 
 Currently, I'm a full-time student pursuing my B.S. in Aerospace Engineering at the University of Colorado, Boulder. When I'm not in class or tinkering at home, I'm usually skiing, hiking, rock climbing, camping, or catching some precious *zzz*'s.
 
+If you're here from the Engineering Honors Program, you can download my Freshman year Philosophy on Education <a href="{{ site.baseurl }}/assets/philosophy_on_education.pdf" download>here</a>.
+
 ### Contact
 
 Email: [Carter.Mak@colorado.edu](mailto:Carter.Mak@colorado.edu) <br/>
